@@ -1,0 +1,19 @@
+public class SquareArea {
+    public static int area(int side) {
+        return side * side;
+    }
+}
+
+
+
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+public class SquareAreaTest {
+
+    @Test
+    void testArea() {
+        assertEquals(16, SquareArea.area(4));
+    }
+}
