@@ -1,0 +1,25 @@
+public class Calculator {
+    public static int add(int a, int b) { return a + b; }
+    public static int sub(int a, int b) { return a - b; }
+    public static int mul(int a, int b) { return a * b; }
+    public static int div(int a, int b) {
+        if (b == 0) throw new ArithmeticException();
+        return a / b;
+    }
+}
+
+
+
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+public class CalculatorTest {
+    @Test
+    void testAdd() {
+        assertEquals(5, Calculator.add(2, 3));
+    }
+    @Test
+    void testDiv() {
+        assertThrows(ArithmeticException.class, () -> Calculator.div(5, 0));
+    }
+}
