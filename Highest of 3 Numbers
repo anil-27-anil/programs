@@ -1,0 +1,20 @@
+public class Highest {
+    public static int findMax(int a, int b, int c) {
+        return Math.max(a, Math.max(b, c));
+    }
+}
+
+
+
+
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+public class HighestTest {
+
+    @Test
+    void testMax() {
+        assertEquals(10, Highest.findMax(10, 5, 3));
+    }
+}
