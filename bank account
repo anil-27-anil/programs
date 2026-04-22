@@ -6,11 +6,11 @@ public class BankAccount {
     }
 
     public void deposit(double amount) {
-        if (amount > 0) balance += amount;
+        balance += amount;
     }
 
     public void withdraw(double amount) {
-        if (amount > 0 && amount <= balance) {
+        if (amount <= balance) {
             balance -= amount;
         }
     }
@@ -22,10 +22,8 @@ public class BankAccount {
 
 
 
-
-
-import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 public class BankAccountTest {
 
