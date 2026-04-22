@@ -1,0 +1,19 @@
+public class SimpleInterest {
+    public static double calculate(double p, double r, double t) {
+        return (p * r * t) / 100;
+    }
+}
+
+
+
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+public class SimpleInterestTest {
+
+    @Test
+    void testSI() {
+        assertEquals(200.0, SimpleInterest.calculate(1000, 10, 2));
+    }
+}
