@@ -1,0 +1,19 @@
+public class StringLength {
+    public static int getLength(String str) {
+        return str.length();
+    }
+}
+
+
+
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+public class StringLengthTest {
+
+    @Test
+    void testLength() {
+        assertEquals(5, StringLength.getLength("Hello"));
+    }
+}
